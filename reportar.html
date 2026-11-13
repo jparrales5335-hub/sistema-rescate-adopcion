@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para reportar animales que necesitan rescate.">
+    <title>Reportar un animal | Rescate y Adopción</title>
+</head>
+<body>
+    <header>
+        <h1>Reportar un animal</h1>
+        <p>Complete los datos solicitados para registrar un caso de rescate.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html" aria-current="page">Reportar un animal</a></li>
+            <li><a href="rescates.html">Ver reportes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section aria-labelledby="formulario-titulo">
+            <h2 id="formulario-titulo">Formulario de reporte</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Información del animal</legend>
+
+                    <p>
+                        <label for="nombre-animal">Nombre del animal (si lo conoce):</label>
+                        <input type="text" id="nombre-animal" name="nombre-animal"
+                               maxlength="50" placeholder="Ejemplo: Luna">
+                    </p>
+
+                    <p>
+                        <label for="tipo-animal">Tipo de animal:</label>
+                        <select id="tipo-animal" name="tipo-animal" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="color">Color o características:</label>
+                        <input type="text" id="color" name="color" required
+                               maxlength="100" placeholder="Ejemplo: café con manchas blancas">
+                    </p>
+
+                    <p>
+                        <label for="estado">Situación del animal:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="abandonado">Parece estar abandonado</option>
+                            <option value="herido">Necesita atención</option>
+                            <option value="extraviado">Está extraviado</option>
+                            <option value="otro">Otra situación</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ubicación del reporte</legend>
+
+                    <p>
+                        <label for="ubicacion">Lugar donde se encuentra:</label>
+                        <input type="text" id="ubicacion" name="ubicacion" required
+                               maxlength="150" placeholder="Barrio, calle o referencia">
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha del avistamiento:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </p>
+
+                    <p>
+                        <label for="descripcion">Descripción adicional:</label>
+                        <textarea id="descripcion" name="descripcion" rows="5"
+                                  maxlength="500" placeholder="Describa la situación del animal"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+
+                    <p>
+                        <label for="contacto">Nombre de quien reporta:</label>
+                        <input type="text" id="contacto" name="contacto" required
+                               minlength="3" maxlength="80" autocomplete="name">
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required
+                               autocomplete="email" placeholder="ejemplo@correo.com">
+                    </p>
+
+                    <p>
+                        <label for="telefono">Teléfono (10 dígitos):</label>
+                        <input type="tel" id="telefono" name="telefono" required
+                               pattern="[0-9]{10}" inputmode="numeric"
+                               title="Ingrese exactamente 10 dígitos." placeholder="0991234567">
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Enviar reporte de prueba</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+            </form>
+            <p><strong>Nota:</strong> La validación es realizada por el navegador. Este prototipo
+            no guarda ni transmite los datos; para ello se necesitaría un servidor.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Volver al inicio</a></p>
+        <p>&copy; 2026 Sistema de Control de Rescate y Adopción.</p>
+    </footer>
+</body>
+</html>
